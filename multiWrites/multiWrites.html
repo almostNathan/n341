@@ -1,0 +1,47 @@
+<!--
+    filename: multiWrites.html
+    author: Nathan Allen
+    created: 9/8/21
+    purpose: webpage to demonstrate the different ways to write to the page with javascript
+    mod history: 
+	9/8/21 - changed stylesheet and JS destinations
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/multiWrites.css">
+    <!--import jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../js/multiWrites.js"></script>
+    <title>Multi-Writes</title>
+</head>
+<body>
+    <!--element to test .textContent-->    
+    <div id = "divTextContent">
+        What kind of grades did the Pirate get in School?
+        <!--Button to display the answer to .textContent-->
+    </br>
+        <button onclick = "clickTextContent()" id="btnTextContent">Tell Me!</button>
+    </div>
+    <!--element to test .innerHTML-->    
+    <div id = "divInnerHtml">
+        Why did the Pirate go to the Apple Store?
+        <!--Button to display the answer to .innerHTML-->
+    </br>
+        <button onclick = "clickInnerHtml()" id="btnInnerHtml">Tell Me!</button>
+    </div>
+    
+    <!--element to test document.write()-->    
+    <div id = "divDocumentWrite">
+        How much did the pirate pay for his peg-leg and hook?
+        <!--Button to display the answer to document.write()-->
+    </br>
+        <button onclick = "clickDocumentWrite()" id = "btnDocumentWrite">I can't wait, tell me!</button>
+    </div>
+
+</body>
+</html>

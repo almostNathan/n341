@@ -1,0 +1,29 @@
+/*
+    filename: idAndStyle.css
+    author: Nathan Allen
+    created: 9/3/21
+    Mod History:
+    9/4/21 - added styling for text for divs
+
+*/
+/*style for first div*/
+#firstDiv{
+    background-color: seagreen;
+    height: 100px;
+    width: 100px;
+}
+
+/*style for second div*/
+#secondDiv{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+
+}
+
+/*styles for both divs */
+div{
+    /*center the text vertically/horizontally*/
+    text-align: center;
+    line-height: 100px;
+}

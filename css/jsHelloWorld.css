@@ -1,0 +1,20 @@
+/*
+    filename: jsHelloWorld.css
+    author: Nathan Allen
+    purpose: style the page that alerts user as pirate
+    created: 9/2/2021
+    mod history:
+
+
+*/
+
+
+h1{
+    font-size: 30px;
+}
+
+
+/*make background blue like the ocean*/
+body{
+    background-color: blue;
+}

@@ -1,0 +1,37 @@
+/*
+    filename: multiWrites.css
+    author: Nathan Allen
+    created: 9/8/21
+    purpose: apply different styles to differentiate parts of the webpage
+    mod history: 
+*/
+
+
+/*set properties that div elements will have in common*/
+div{
+    height: 200px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*properties for all buttons*/
+button{
+    vertical-align: text-bottom;
+    align-self: center;
+    display: none;
+}
+
+/*set properties to differentiate each div*/
+#divTextContent{
+    background-color: cadetblue;
+}
+
+#divInnerHtml{
+    background-color: crimson;
+}
+
+#divDocumentWrite{
+    background-color: darkgreen;
+
+}
