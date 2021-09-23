@@ -1,0 +1,40 @@
+<!--
+    filename: randomness.js
+    author: Nathan Allen
+    created: 9/21/21
+    purpose: to demonstrate the use of objects
+        make a pirate object, instatiate 4 of them (one captain),
+        captain picks a random number, 3 others guess, captain 
+        announces winner if any.
+    mod history:
+        9/22/21 added startGame button 
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href = "../css/randomness.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../js/randomness.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "pirateShip">
+        <div id = "captain" class = "pirate"></div>
+        <div id = "pirate1" class = "pirate"></div>
+        <div id = "pirate2" class = "pirate"></div>
+        <div id = "pirate3" class = "pirate"></div>
+    </div>
+
+    <button onclick="startGame()" id="startGame">Guess!</button>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+/*
+    filename: randomness.js
+    author: Nathan Allen
+    created: 9/21/21
+    purpose: to demonstrate the use of objects
+        make a pirate object, instatiate 4 of them (one captain),
+        captain picks a random number, 3 others guess, captain 
+        announces winner if any.
+    mod history:
+        9/22/21 added startGame button markup
+                changed text color of dark pirates
+*/
+.pirate{
+    height:  200px;
+    width: 200px;
+    float: left;
+    margin: 30px;
+
+}
+
+#captain{
+    background-color: red;
+}
+
+#pirate1{
+    background-color: lightblue;
+
+}
+
+#pirate2{
+    background-color: blue;
+    color: white;
+
+}
+
+#pirate3{
+    background-color: darkblue;
+    color: white;
+
+}
+
+#startGame{
+    height: 30px;
+    width: 60px;
+}
