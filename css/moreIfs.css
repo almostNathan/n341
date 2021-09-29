@@ -1,0 +1,31 @@
+/*
+    filename: moreIfs.css
+    author: Nathan Allen
+    created: 9/29/21
+    purpose: style the output containers for easier readability
+    mod history: 
+
+*/
+
+div{
+    padding: 10px;
+    font-size: 24px;
+    width: 400px;
+}
+
+#currentLoc{
+    background-color: lightblue;
+}
+
+#targetLoc{
+    background-color: lightgrey;
+}
+
+#ifElse{
+    background-color: lightblue;
+}
+
+#caseSwitch{
+    background-color: lightgrey;
+
+}

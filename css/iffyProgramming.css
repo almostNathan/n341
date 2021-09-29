@@ -1,7 +1,17 @@
 /*
-    filename: iffyProgramming.html
+    filename: iffyProgramming.css
     author: Nathan Allen
     created: 9/28/21
     purpose: web page to display outputs of conditional statements
     mod history:
 */
+
+/*styling for output from user response*/
+div{
+    font-size: 30px;
+    height:200px;
+    width: 800px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 200px;
+}
