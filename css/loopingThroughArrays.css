@@ -1,0 +1,18 @@
+/*
+    filename: loopingThroughArrays.css
+    author: Nathan Allen
+    created: 10/6/21
+    purpose: style the divs so they appear properly
+    mod history:
+
+*/
+
+div{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    text-align: center;
+    float: left;
+    background-color: lightgray;
+}
