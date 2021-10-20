@@ -1,0 +1,40 @@
+/*
+    filename: buttons.css
+    author: Nathan Allen
+    created: 10/13/21
+    purpose: style buttons for pirate attacks
+    mod history:
+
+*/
+
+body{
+    background-color: lightblue;
+}
+
+button{
+
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+}
+
+#event1, #listener1{
+    background-color: red;
+}
+
+#event2, #listener2{
+    background-color: blue;
+}
+
+#multiListener{
+    background-color: green;
+}
+
+#battleCryOutput{
+    font-size: 24px;
+}
+
+#defendOutput{
+    font-size: 24px;
+
+}
