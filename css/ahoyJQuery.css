@@ -1,0 +1,16 @@
+/*
+    filename: ahoyJQuery.css
+    author: Nathan Allen
+    created: 10/19/21
+    purpose: 
+    mod history:
+        10/20/21 - added style for button and p
+*/
+
+button{
+    margin: 10px;
+}
+
+p{
+    font-size: 20px;
+}

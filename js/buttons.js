@@ -2,7 +2,7 @@
     filename: buttons.js
     author: Nathan Allen
     created: 10/13/21
-    purpose to demonstrate the difference between event HANDLERS and LISTENERS
+    purpose: to demonstrate the difference between event HANDLERS and LISTENERS
     mod history:
 
 */
