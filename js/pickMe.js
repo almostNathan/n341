@@ -4,6 +4,7 @@
     created: 10/25/21
     purpose: demonstrate use of jQuery selectors and filters
     mod history:
+        10/26/21: added .parent() selection
 */
 
 //set up variable to hold Current JQuery selection
@@ -35,6 +36,7 @@ $(document).ready(function(){
         $currentSelection.css({
             "backgroun-color": "black",
             "color": "white"})
+        
         makeChanges($currentSelection)
     })
 
@@ -62,7 +64,13 @@ $(document).ready(function(){
         makeChanges($currentSelection)
     })
 
+    //selecting parent of element
+    $("#button8").click(function(){
+        makeChanges($("#mckraken").parent())
+    })
 
+
+    //changes to be made to selections
     function makeChanges($currentSelection){
         $("li, ul").css("border", "none").css("font-size", 16).css("backgroun-color", "white").css("color", "black")
         $currentSelection.css("border", "5px solid red").css("font-size", 24)
