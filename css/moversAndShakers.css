@@ -1,0 +1,23 @@
+/*
+    filename: moversAndShakers.css
+    author: Nathan Allen
+    created: 11/4/21
+    purpose: stylize the elements demonstrating use of jQuery events and animation
+    mod history:
+*/
+
+#blackBox{
+    background-color: black;
+    height: 100px;
+    width: 100px;
+}
+
+button{
+    margin: 3px;
+}
+fieldset{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: fit-content;
+}

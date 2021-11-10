@@ -6,6 +6,9 @@
     mod history:
 */
 
+ul{
+    width: fit-content;
+}
 li{
     line-height: 30px;
     margin: 5px;
