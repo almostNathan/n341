@@ -1,0 +1,16 @@
+/*
+    filename: triggered.css
+    author: Nathan Allen
+    created: 11/10/21
+    purpose: style elements to demonstrate triggers
+    mod history:
+
+*/
+
+div{
+    float: left;
+    height: 100px;
+    width: 100px;
+    background: black;
+    padding: 5px;
+}
