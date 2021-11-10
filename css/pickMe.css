@@ -1,0 +1,21 @@
+/*
+    filename: pickMe.css
+    author: Nathan Allen
+    created: 10/25/21
+    purpose: 
+    mod history:
+*/
+
+ul{
+    width: fit-content;
+}
+li{
+    line-height: 30px;
+    margin: 5px;
+    width: fit-content;
+}
+
+
+button{
+    margin: 5px;
+}
