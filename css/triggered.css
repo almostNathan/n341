@@ -12,5 +12,9 @@ div{
     height: 100px;
     width: 100px;
     background: black;
-    padding: 5px;
+    margin: 5px;
+}
+
+p{
+    clear: left;
 }
