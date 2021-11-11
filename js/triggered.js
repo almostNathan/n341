@@ -42,6 +42,7 @@ $(document).ready(function(){
             //change div color to red
             $(this).css("background-color", "red")
             $(this).focus()
+
         },
         //mouse out
         function(){
@@ -51,6 +52,18 @@ $(document).ready(function(){
             }
         }
     );
+
+    //to show which div has focus
+    //when a div gains focus 
+    $("div").focusin(function(){
+        //add "focus" to box to signify focus
+        $(this).text("focus")
+    })
+    //when it loses focus
+    $("div").focusout(function(){
+        //remove text
+        $(this).text("")
+    })
 
 
     //add a paragraph element 
