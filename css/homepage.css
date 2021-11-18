@@ -64,3 +64,9 @@ hr{						/* Define the formatting for the <hr /> line between "Course Work" and 
 	width: 100%;
 	float: left;
 }
+
+#finalProjectUL{
+	position: relative;
+	left: 175px;
+	
+}

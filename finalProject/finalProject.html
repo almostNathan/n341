@@ -1,3 +1,11 @@
+<!--
+    filename: finalProject.html
+    author: Nathan Allen
+    purpose: display form for user to fill out information about their knowledge of Magic: The Gathering
+    created: 11/17/21
+    mod history:
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +14,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../js/finalProject.js"></script>
 
-    <link rel="stylesheet" href ="../css/finalProject.css">
+    <script src="../theme/jquery-ui.js"></script> <!--jQuery Theme JavaScript base file-->
+    <script src="../js/finalProject.js"></script> <!--My JavaScript file for this page-->
+
+    <link href="../theme/jquery-ui.css"rel="stylesheet" > <!--jQuery Theme CSS base file--> 
+    <link href ="../css/finalProject.css"rel="stylesheet" > <!--My CSS file for this pag-->
 
     <title>Final Project</title>
 </head>
 <body>
-    
+<h2 class="demoHeaders">Checkboxradio</h2>
+<form style="margin-top: 1em;">
+	<div id="radioset">
+		<input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
+		<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+		<input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
+	</div>
+</form>
 </body>
 </html>
