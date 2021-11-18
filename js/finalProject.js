@@ -5,100 +5,105 @@
     created: 11/17/21
     mod history:
 */
-$( "#accordion" ).accordion();
+$(document).ready(function(){
 
-var availableTags = [
-	"ActionScript",
-	"AppleScript",
-	"Asp",
-	"BASIC",
-	"C",
-	"C++",
-	"Clojure",
-	"COBOL",
-	"ColdFusion",
-	"Erlang",
-	"Fortran",
-	"Groovy",
-	"Haskell",
-	"Java",
-	"JavaScript",
-	"Lisp",
-	"Perl",
-	"PHP",
-	"Python",
-	"Ruby",
-	"Scala",
-	"Scheme"
-];
-$( "#autocomplete" ).autocomplete({
-	source: availableTags
-});
+	$( "#accordion" ).accordion();
 
-$( "#button" ).button();
-$( "#button-icon" ).button({
-	icon: "ui-icon-gear",
-	showLabel: false
-});
+	var availableTags = [
+		"ActionScript",
+		"AppleScript",
+		"Asp",
+		"BASIC",
+		"C",
+		"C++",
+		"Clojure",
+		"COBOL",
+		"ColdFusion",
+		"Erlang",
+		"Fortran",
+		"Groovy",
+		"Haskell",
+		"Java",
+		"JavaScript",
+		"Lisp",
+		"Perl",
+		"PHP",
+		"Python",
+		"Ruby",
+		"Scala",
+		"Scheme"
+	];
+	$( "#autocomplete" ).autocomplete({
+		source: availableTags
+	});
 
-$( "#radioset" ).buttonset();
+	$( "#button" ).button();
+	$( "#button-icon" ).button({
+		icon: "ui-icon-gear",
+		showLabel: false
+	});
 
-$( "#controlgroup" ).controlgroup();
+	$( "#radioset" ).buttonset();
 
-$( "#tabs" ).tabs();
+	$( "#controlgroup" ).controlgroup();
 
-$( "#dialog" ).dialog({
-	autoOpen: false,
-	width: 400,
-	buttons: [
-		{
-			text: "Ok",
-			click: function() {
-				$( this ).dialog( "close" );
+	$( "#tabs" ).tabs();
+
+	$( "#dialog" ).dialog({
+		autoOpen: false,
+		width: 400,
+		buttons: [
+			{
+				text: "Ok",
+				click: function() {
+					$( this ).dialog( "close" );
+				}
+			},
+			{
+				text: "Cancel",
+				click: function() {
+					$( this ).dialog( "close" );
+				}
 			}
+		]
+	});
+
+	// Link to open the dialog
+	$( "#dialog-link" ).click(function( event ) {
+		$( "#dialog" ).dialog( "open" );
+		event.preventDefault();
+	});
+
+	$( "#datepicker" ).datepicker({
+		inline: true
+	});
+
+	$( "#slider" ).slider({
+		range: true,
+		values: [ 17, 67 ]
+	});
+
+	$( "#progressbar" ).progressbar({
+		value: 20
+	});
+
+	$( "#spinner" ).spinner();
+
+	$( "#menu" ).menu();
+
+	$( "#tooltip" ).tooltip();
+
+	$( "#selectmenu" ).selectmenu();
+
+	// Hover states on the static widgets
+	$( "#dialog-link, #icons li" ).hover(
+		function() {
+			$( this ).addClass( "ui-state-hover" );
 		},
-		{
-			text: "Cancel",
-			click: function() {
-				$( this ).dialog( "close" );
-			}
+		function() {
+			$( this ).removeClass( "ui-state-hover" );
 		}
-	]
-});
+	);
 
-// Link to open the dialog
-$( "#dialog-link" ).click(function( event ) {
-	$( "#dialog" ).dialog( "open" );
-	event.preventDefault();
-});
 
-$( "#datepicker" ).datepicker({
-	inline: true
-});
-
-$( "#slider" ).slider({
-	range: true,
-	values: [ 17, 67 ]
-});
-
-$( "#progressbar" ).progressbar({
-	value: 20
-});
-
-$( "#spinner" ).spinner();
-
-$( "#menu" ).menu();
-
-$( "#tooltip" ).tooltip();
-
-$( "#selectmenu" ).selectmenu();
-
-// Hover states on the static widgets
-$( "#dialog-link, #icons li" ).hover(
-	function() {
-		$( this ).addClass( "ui-state-hover" );
-	},
-	function() {
-		$( this ).removeClass( "ui-state-hover" );
-	}
-);
+	})
