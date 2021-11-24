@@ -105,5 +105,17 @@ $(document).ready(function(){
 		}
 	);
 
+	$("#submitButton").click(function () { 
+		checkBoxes = document.getElementById("controlGroup")
+		$("#outputArea").append(checkBoxes.value);
 
-	})
+		commentSection = document.getElementById("comments")
+		$("#outputArea").append(commentSection.value);
+
+
+			
+	});
+
+
+
+})

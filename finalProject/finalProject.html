@@ -1,16 +1,84 @@
-<!doctype html>
-<html lang="us">
-<head>
-	<meta charset="utf-8">
-	<title>jQuery UI Example Page</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link href="../theme/jquery-ui.css" rel="stylesheet">
-    <script src="../theme/jquery-ui.js"></script>
+<!--
+    filename: finalProject.html
+    author: Nathan Allen
+    purpose: display form for user to fill out information about their knowledge of Magic: The Gathering
+    created: 11/17/21
+    mod history:
 
-    <link href="../css/finalProject.css">
-    <script src="../js/finalProject.js"></script>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="../theme/jquery-ui.js"></script> <!--jQuery Theme JavaScript base file-->
+    <script src="../js/finalProject.js"></script> <!--My JavaScript file for this page-->
+
+    <link href="../theme/jquery-ui.css"rel="stylesheet" > <!--jQuery Theme CSS base file--> 
+    <link href ="../css/finalProject.css"rel="stylesheet" > <!--My CSS file for this pag-->
+
+    <title>Final Project</title>
 </head>
 <body>
-	
+    <!--NEED ->
+            -one of (accordionm tabs, or menu)
+            nav scheme should permit navigation
+            -radio buttons that are mutually exclusive
+            -text fields to type into
+            -multiple check box selection
+            -reset button
+            -output area to display entries-->
+    <h1>MTG Interest Form</h1>
+
+    <h2>Formats</h2>
+    <div id="accordion">
+        <h3>Standard</h3>
+        <div>Ever rotating format. Only allows the most recent cards (printed in the last 2 years).</div>
+        <h3>Modern</h3>
+        <div>Much larger format. Contains cards dating back to 2003.  So any card that has been printed since then is allowed.</div>
+        <h3>Commander</h3>
+        <div>One of the most popular formats. It allows any card that has ever been printed, over 20,000 cards to choose from.  There is a modest list of cards not allowed</div>
+    </div> <!--end accordion-->
+
+
+    <h2>Which Format(s) Sound Interesting to You?</h2>
+    <div id="controlgroup">
+        <label for="checkboxStandard">Standard</label>
+        <input type="checkbox" name="checkboxStandard" id="checkboxStandard">
+        <label for="checkboxModern">Modern</label>
+        <input type="checkbox" name="checkboxModern" id="checkboxModern">
+        <label for="checkboxCommander">Commander</label>
+        <input type="checkbox" name="checkboxCommander" id="checkboxCommander">
+    </div>
+
+    <h2>What Color Seems the Most Fun to Play?</h2>
+
+    <div id="radioset">
+        <input type="radio" name="radio" id="white">
+        <label for="white">White</label>
+        <input type="radio" name="radio" id="blue">
+        <label for="blue">Blue</label>
+        <input type="radio" name="radio" id="black">
+        <label for="black">Black</label>
+        <input type="radio" name="radio" id="red">
+        <label for="red">Red</label>
+        <input type="radio" name="radio" id ="green">
+        <label for="green">Green</label>
+    </div>
+
+    <h2>Additional Questions or Points of Interest.</h2>
+    <textarea id="comments"></textarea>
+
+</br>
+
+    <button id="submitButton">Submit</button>
+    <button id="reset">Reset</button>
+
+    <p id="outputArea"></p>
 
 </body>
+</html>
