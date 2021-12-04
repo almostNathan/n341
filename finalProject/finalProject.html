@@ -13,13 +13,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="../theme/jquery-ui.css" rel="stylesheet" > <!--jQuery Theme CSS base file--> 
+    <link href ="../css/finalProject.css" rel="stylesheet" > <!--My CSS file for this pag-->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="../theme/jquery-ui.js"></script> <!--jQuery Theme JavaScript base file-->
+    <script src="../validation/jquery-validation-1.19.3/dist/jquery.validate.js"></script> <!--jQuery Validaiton Tool-->
     <script src="../js/finalProject.js"></script> <!--My JavaScript file for this page-->
 
-    <link href="../theme/jquery-ui.css"rel="stylesheet" > <!--jQuery Theme CSS base file--> 
-    <link href ="../css/finalProject.css"rel="stylesheet" > <!--My CSS file for this pag-->
 
     <title>Final Project</title>
 </head>
@@ -33,52 +35,90 @@
             -reset button
             -output area to display entries-->
     <h1>MTG Interest Form</h1>
+    <form id="mtgForm">
+        <h2>Formats</h2>
+        <div id="accordion">
+            <h3>Standard</h3>
+            <div>Ever rotating format. Only allows the most recent cards (printed in the last 2 years).</div>
+            <h3>Modern</h3>
+            <div>Much larger format. Contains cards dating back to 2003.  So any card that has been printed since then is allowed.</div>
+            <h3>Commander</h3>
+            <div>One of the most popular formats. It allows any card that has ever been printed, over 20,000 cards to choose from.  There is a modest list of cards not allowed</div>
+        </div> <!--end accordion-->
 
-    <h2>Formats</h2>
-    <div id="accordion">
-        <h3>Standard</h3>
-        <div>Ever rotating format. Only allows the most recent cards (printed in the last 2 years).</div>
-        <h3>Modern</h3>
-        <div>Much larger format. Contains cards dating back to 2003.  So any card that has been printed since then is allowed.</div>
-        <h3>Commander</h3>
-        <div>One of the most popular formats. It allows any card that has ever been printed, over 20,000 cards to choose from.  There is a modest list of cards not allowed</div>
-    </div> <!--end accordion-->
+
+        <h2>Which Format(s) Sound Interesting to You?</h2>
+        <div id="controlgroup">
+            <label for="checkboxStandard">Standard</label>
+            <input type="checkbox" name="formatCheckbox" id="checkboxStandard" value="Standard">
+            <label for="checkboxModern">Modern</label>
+            <input type="checkbox" name="formatCheckbox" id="checkboxModern" value="Modern">
+            <label for="checkboxCommander">Commander</label>
+            <input type="checkbox" name="formatCheckbox" id="checkboxCommander" value="Commander">
+        </div>
+
+        <h2>The Colors of Magic: The Gathering (WUBRG)</h2>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1" class=whiteTab>White (W)</a></li>
+                <li><a href="#tabs-2" class=blueTab>Blue (U)</a></li>
+                <li><a href="#tabs-3" class=blackTab>Black (B)</a></li>
+                <li><a href="#tabs-4" class=redTab>Red (R)</a></li>
+                <li><a href="#tabs-5" class=greenTab>Green (G)</a></li>
+            </ul>
+            <ul>
+                <li id="tabs-1">White stands for law, structure, and equality. This color is for those who want to protect themselves and leverage small effective creatures.</li>
+                <li id="tabs-2">Blue stands for knowledge, deceit, and control. This color is for those who want to control the game and the way their opponent plays the game.</li>
+                <li id="tabs-3">Black stands for power, death and sacrifice. This color is for those who want to win no matter what it takes.  They are willing to sacrifice their own life and creatures to win the game.</li>
+                <li id="tabs-4">Red stands for aggression, impulse and destruction. This color is for those who want to come out swinging with aggressive cards and keep their opponent on the back foot.</li>
+                <li id="tabs-5">Green stands for nature, wildlife, and growth. This color is for those who want to play big splashy creatures and overrun their oppnent with them.</li>
+            </ul>
+        </div><!--end tabs-->
 
 
-    <h2>Which Format(s) Sound Interesting to You?</h2>
-    <div id="controlgroup">
-        <label for="checkboxStandard">Standard</label>
-        <input type="checkbox" name="checkboxStandard" id="checkboxStandard">
-        <label for="checkboxModern">Modern</label>
-        <input type="checkbox" name="checkboxModern" id="checkboxModern">
-        <label for="checkboxCommander">Commander</label>
-        <input type="checkbox" name="checkboxCommander" id="checkboxCommander">
-    </div>
+        <h2>What Color Seems the Most Fun to Play?</h2>
 
-    <h2>What Color Seems the Most Fun to Play?</h2>
+        <div id="radioset">
+            <input type="radio" name="radio" id="white" value="White" checked>
+            <label for="white">White</label>
+            <input type="radio" name="radio" id="blue" value="Blue">
+            <label for="blue">Blue</label>
+            <input type="radio" name="radio" id="black" value="Black">
+            <label for="black">Black</label>
+            <input type="radio" name="radio" id="red" value="Red">
+            <label for="red">Red</label>
+            <input type="radio" name="radio" id ="green" value="Green">
+            <label for="green">Green</label>
+        </div>
+        
 
-    <div id="radioset">
-        <input type="radio" name="radio" id="white">
-        <label for="white">White</label>
-        <input type="radio" name="radio" id="blue">
-        <label for="blue">Blue</label>
-        <input type="radio" name="radio" id="black">
-        <label for="black">Black</label>
-        <input type="radio" name="radio" id="red">
-        <label for="red">Red</label>
-        <input type="radio" name="radio" id ="green">
-        <label for="green">Green</label>
-    </div>
+        <!--input fields and datepicker-->
+        <h2>Create Account</h2>
+        <label class="accountlabel">Email: </label><input type="email" class="accountField" id="userEmail" name="userEmail" placeholder="Type in your Email address" required autofocus>
+        <br>
+        <label class="accountlabel">Password: </label><input type="password" class="accountField" id="userPassword" name="userPassword">
+        <br>
+        <label class="accountlabel">Phone Number:</label><input type="tel" class="accountField" id="userPhoneNumber" name="userPhoneNumber">
+        <br>
+        <label>Birth Date: </label><input type="date" class="accountField" id="userBirthDate" name="userBirthDate">
 
-    <h2>Additional Questions or Points of Interest.</h2>
-    <textarea id="comments"></textarea>
+        <!--slider-->
+        <h3>How likely are you to try out Magic: The Gathering</h3>
+        <input type="range" id="interest" min="1" max="10"> <label for="interest" id="interestLabel"></label>
 
-</br>
+        <!--textarea-->
+        <h2>Additional Questions or Points of Interest.</h2>
+        <textarea id="comments" name="comments"></textarea>
 
-    <button id="submitButton">Submit</button>
-    <button id="reset">Reset</button>
+        <br>
 
-    <p id="outputArea"></p>
+        <button id="submit" type="submit">Submit</button>
+        <button id="reset" type="reset" >Reset</button>
+
+        <p id="outputArea"></p>
+
+
+    </form>
 
 </body>
 </html>

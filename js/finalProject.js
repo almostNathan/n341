@@ -5,6 +5,8 @@
     created: 11/17/21
     mod history:
 */
+var elInterestSlider 
+var elInterestSliderLabel
 $(document).ready(function(){
 
 	$( "#accordion" ).accordion();
@@ -104,18 +106,120 @@ $(document).ready(function(){
 			$( this ).removeClass( "ui-state-hover" );
 		}
 	);
+	
 
-	$("#submitButton").click(function () { 
-		checkBoxes = document.getElementById("controlGroup")
-		$("#outputArea").append(checkBoxes.value);
+	//additional styling
+	$("#submit,#reset").button()
+	$("#interest").slider()
 
-		commentSection = document.getElementById("comments")
-		$("#outputArea").append(commentSection.value);
-
-
+	$.validator.setDefaults({
+		submitHandler: function() {
+			//CHECKBOX INFO
+			elOutputArea = $("#outputArea") 
+			for (checkedItem of $(":checked:checkbox")){
+				//print checkbox
+				elOutputArea.append("Format: " + checkedItem.value + "<br>")
+			}
 			
-	});
+			//RADIO INFO
+			for(selectedRadio of $(":checked:radio")){
+				//print radio
+				elOutputArea.append("Color: " + selectedRadio.value + "<br>")
+			}
+
+			//USER INPUT INFO
+			//email, passoword, phonenumber
+			strUserEmail = document.getElementById("userEmail").value
+			strUserPassword = document.getElementById("userPassword").value
+			strUserPhoneNumber = document.getElementById("userPhoneNumber").value
+			strUserBirthDate = $("#userBirthDate").val()
+
+			//just display password as *'s the length of the password
+			strPasswordOutput = "*".repeat(strUserPassword.length)
+
+			//print user info
+			elOutputArea.append("Email: " + strUserEmail +"<br>")
+				.append("Password: " + strPasswordOutput + "<br>")
+				.append("Phone: " + strUserPhoneNumber + "<br>")
+				.append("Birth Date: " + strUserBirthDate + "<br>")
+
+			//display interest
+			elOutputArea.append("Interest: " +$("#interest").val() + "<br>")
+			
+			//display comments
+			elOutputArea.append("Comments: " + $("#comments").val())
+
+			alert("success")//alert to confirm validation passes
+		},//end submitHandler
+
+		errorPlacement: function(error,element){
+			error.insertAfter(element)
+		}//end errorPlacement
+	})
+
+	//attach validator to form
+	$("#mtgForm").validate({
+		rules: {
+			formatCheckbox: {
+				required: true
+			},
+			userEmail: {
+				required: true
+
+			},
+			userPassword: {
+				required: true,
+				minlength: 4
+			
+			},
+			userPhoneNumber: {
+				required: true,
+				maxlength: 10,
+				digits: true
+			},
+			userBirthDate: {
+				required: true
+			},
+			comments: {
+				required: true,
+				minlength: 10
+
+			}
+
+		},//end rules
+		messages: {
+			formatCheckbox: {
+				required: "Please select at least one format type."
+			},
+			userEmail:{
+				required: "Please enter your email."
+			},
+			userPassword: {
+				required: "Please enter a password.",
+				minlength: $.validator.format("Must have at least {0} characters.")
+			},
+			userPhoneNumber: {
+				required: "Please enter your phone number.",
+				maxlength: "Phone numbers must be 10 digits."
+			},
+			userBirthDate: {
+				required: "Please enter your birth date."
+			},
+			comments: {
+				required: "Please give us at least one comment, it really helps.",
+				minlength: "Type something somewhat meaningful at least. Thanks!"
+			}
+		}//end messages
+	})//end validate
 
 
+	//display number next to slider
+	elInterestSlider = document.getElementById("interest")
+	elInterestSliderLabel = document.getElementById("interestLabel")
+	elInterestSliderLabel.textContent = elInterestSlider.value
+	elInterestSlider.onchange = function(){
+		elInterestSliderLabel.textContent = elInterestSlider.value
+	}
 
-})
+})//end doc.ready
+
